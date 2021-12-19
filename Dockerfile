@@ -8,6 +8,8 @@ COPY yarn.lock .
 RUN yarn install
 # Copy app files
 COPY . .
+# Install d3
+RUN npm install d3
 # Expose port
 EXPOSE 3000
 # Start the app
